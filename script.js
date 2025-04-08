@@ -91,3 +91,23 @@ function displayBooks() {
 }
 
 displayBooks();
+
+const form = document.querySelector("form");
+form.addEventListener("submit", (e) => {
+  e.preventDefault();
+
+  const titleInput = document.querySelector("#title");
+  const authorInput = document.querySelector("#author");
+  const pagesInput = document.querySelector("#pages");
+  const readInput = document.querySelector("#read");
+
+  const title = titleInput.value;
+  const author = authorInput.value;
+  const pages = pagesInput.value;
+  const read = readInput.checked;
+  console.log(title, author, pages, read); // Before addBookToLibrary
+  addBookToLibrary(title, author, pages, read);
+  console.log(myLibrary); // After addBookToLibrary
+  bookContainer.innerHTML = "";
+  displayBooks();
+});

@@ -9,5 +9,36 @@
   </head>
   <body>
     <div class="container"></div>
+    <div class="form-container">
+      <form>
+        <div class="input-group">
+          <label for="title">Title</label>
+          <input
+            id="title"
+            type="text"
+            placeholder="Enter the title"
+            required
+          />
+        </div>
+        <div class="input-group">
+          <label for="author">Author</label>
+          <input id="author" type="text" placeholder="Enter author" required />
+        </div>
+        <div class="input-group">
+          <label for="pages">Pages</label>
+          <input
+            id="pages"
+            type="number"
+            placeholder="Enter number of pages"
+            required
+          />
+        </div>
+        <div class="input-group">
+          <label for="read">Read</label>
+          <input id="read" type="checkbox" />
+        </div>
+        <button type="submit">Submit</button>
+      </form>
+    </div>
   </body>
 </html>
